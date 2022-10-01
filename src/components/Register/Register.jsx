@@ -33,7 +33,7 @@ const Register = () => {
         console.log("Error: please fill the Fields properly ");
       } else {
         //  send these user data in database using fetch
-        const userData = await fetch("/register", {
+        const userData = await fetch("https://techbaaba-api.onrender.com/register", {
           //user data send
           method: "POST",
           headers: {
