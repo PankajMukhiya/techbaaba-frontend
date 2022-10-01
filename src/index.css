@@ -1,0 +1,114 @@
+/* FONT_FAMILY */
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap");
+
+/* FONT FAMILY_NAME */
+/* 
+font-family: 'BioRhyme', serif;
+font-family: 'Roboto Mono', monospace; 
+font-family: 'Baloo Bhaijaan 2', cursive;
+font-family: 'Cinzel Decorative', cursive;
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+button {
+  font-family: "Roboto Mono", monospace;
+}
+input {
+  font-family: monospace;
+}
+h2{
+  font-family: "BioRhyme", serif;
+}
+/* ______________________________________|NAVBAR SECTION|________________________________*/
+.navbar-brand {
+  font-family: "BioRhyme", serif;
+}
+.nav-item {
+  font-family: "Cinzel Decorative", cursive;
+}
+
+/* ______________________________________|REGISTER & LOGIN  SECTION|________________________________*/
+.register_section {
+  height: 100vh;
+}
+
+.rowRegisterLogin {
+ 
+  border-radius: 56px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 10px 10px 10px #adadad, -10px -10px 10px #ffffff;
+}
+
+.signInBtn {
+  color: black;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 5px 5px 5px #cacaca, -5px -5px 5px #f6f6f6;
+}
+.signInBtn:hover {
+  background: white;
+  /* color: black;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 5px 5px 5px #cacaca, -5px -5px 5px #f6f6f6; */
+}
+
+/* ______________________________________|CONTACT SECTION|________________________________*/
+.contact_row{
+ 
+  border-radius: 56px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 10px 10px 10px #adadad, -10px -10px 10px #ffffff;
+}
+.contactColInfo_1{
+  backdrop-filter: blur(6px) saturate(41%);
+  -webkit-backdrop-filter: blur(6px) saturate(41%);
+  background-color: rgba(181, 252, 252, 0.34);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  box-shadow: 5px 5px 5px #cacaca, -5px -5px 5px #f6f6f6;
+  
+}
+.contactColInfo_2{
+  border-radius: 12px;
+  box-shadow: 5px 5px 5px #cacaca, -5px -5px 5px #f6f6f6;
+
+}
+.contact_P{
+  font-family: 'Roboto Mono', monospace; 
+
+}
+.contact_H5{
+  font-family: 'Baloo Bhaijaan 2', cursive;
+  
+}
+.contact_input {
+  font-family: 'Roboto Mono', monospace; 
+}
+  /* ______________________________________|HOME SECTION|________________________________*/
+  .home_P{
+    font-family: "BioRhyme", serif;
+  }
+  /* ______________________________________|ABOUT SECTION|________________________________*/
+  .about_section {
+    height: 90vh;
+  }
+  
+  .main_about_row {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 10px 10px 10px #adadad, -10px -10px 10px #ffffff;
+  }
+  .about_profile_img{
+    width:10rem ;
+    height:10rem ;
+  }
