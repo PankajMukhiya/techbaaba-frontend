@@ -24,16 +24,19 @@ const Login = () => {
       if (!email || !password) {
         alert("Please Fill the Data ");
       } else {
-        const loginData = await fetch("/signin", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email,
-            password,
-          }),
-        });
+        const loginData = await fetch(
+          "https://techbaaba-api.onrender.com/signin",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email,
+              password,
+            }),
+          }
+        );
         if (loginData.status === 400 || !loginData) {
           alert("Invalid Credentials !");
           console.log("Invalid Credentials !");
@@ -83,63 +86,63 @@ const Login = () => {
                 initialValues={logUser}
                 validationSchema={LoginSchema}
               > */}
-                {/* {(formik) => {
+              {/* {(formik) => {
                   const { errors, touched } = formik;
                   return ( */}
-                    {/* <Form */}
-                    <form
-                      method="POST"
-                      className=" d-flex flex-column justify-content-center align-items-center "
-                    >
-                      {/* Email input */}
-                      <div className="col-10 m-auto d-flex">
-                        <label htmlFor="" className="form-label me-4 ">
-                          <i className="zmdi zmdi-email fs-2  "></i>
-                        </label>
-                        {/* <Field */}
-                        <input
-                          name="email"
-                          type="email"
-                          onChange={handleChangeInp}
-                          className="form-control"
-                          placeholder="Your Email"
-                        />
-                      </div>
-                      {/* email error message */}
-                      {/* {errors.email && touched.email ? (
+              {/* <Form */}
+              <form
+                method="POST"
+                className=" d-flex flex-column justify-content-center align-items-center "
+              >
+                {/* Email input */}
+                <div className="col-10 m-auto d-flex">
+                  <label htmlFor="" className="form-label me-4 ">
+                    <i className="zmdi zmdi-email fs-2  "></i>
+                  </label>
+                  {/* <Field */}
+                  <input
+                    name="email"
+                    type="email"
+                    onChange={handleChangeInp}
+                    className="form-control"
+                    placeholder="Your Email"
+                  />
+                </div>
+                {/* email error message */}
+                {/* {errors.email && touched.email ? (
                         <div className="text-danger">{errors.email}</div>
                       ) : (
                         " "
                       )} */}
-                      {/* Password input */}
-                      <div className="col-10 m-auto d-flex mt-2">
-                        <label htmlFor="" className="form-label me-4">
-                          <i className="zmdi zmdi-lock fs-2"></i>
-                        </label>
-                        <input
-                          name="password"
-                          onChange={handleChangeInp}
-                          type="password"
-                          className="form-control"
-                          placeholder="Your Password"
-                        />
-                      </div> 
-                      {/* email error message */}
-                      {/* {errors.password && touched.password ? (
+                {/* Password input */}
+                <div className="col-10 m-auto d-flex mt-2">
+                  <label htmlFor="" className="form-label me-4">
+                    <i className="zmdi zmdi-lock fs-2"></i>
+                  </label>
+                  <input
+                    name="password"
+                    onChange={handleChangeInp}
+                    type="password"
+                    className="form-control"
+                    placeholder="Your Password"
+                  />
+                </div>
+                {/* email error message */}
+                {/* {errors.password && touched.password ? (
                         <div className="text-danger">{errors.password}</div>
                       ) : (
                         " "
                       )} */}
-                      <div className="col-1 mx-auto mb-2"></div>
-                      <button
-                        className=" signInBtn btn btn-light w-25 mt-2  ms-lg-3 "
-                        type="button"
-                        onClick={userLogin}
-                      >
-                        Sign In
-                      </button>
-                    </form>
-                  {/* );
+                <div className="col-1 mx-auto mb-2"></div>
+                <button
+                  className=" signInBtn btn btn-light w-25 mt-2  ms-lg-3 "
+                  type="button"
+                  onClick={userLogin}
+                >
+                  Sign In
+                </button>
+              </form>
+              {/* );
                 }} */}
               {/* </Formik> */}
             </div>

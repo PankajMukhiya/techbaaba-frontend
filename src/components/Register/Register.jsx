@@ -33,22 +33,25 @@ const Register = () => {
         console.log("Error: please fill the Fields properly ");
       } else {
         //  send these user data in database using fetch
-        const userData = await fetch("https://techbaaba-api.onrender.com/register", {
-          //user data send
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          //and here in body (req.body) send the user data
-          body: JSON.stringify({
-            name,
-            email,
-            phone,
-            work,
-            password,
-            cPassword,
-          }),
-        });
+        const userData = await fetch(
+          "https://techbaaba-api.onrender.com/register",
+          {
+            //user data send
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            //and here in body (req.body) send the user data
+            body: JSON.stringify({
+              name,
+              email,
+              phone,
+              work,
+              password,
+              cPassword,
+            }),
+          }
+        );
         console.log(userData);
         const recieveUserData = await userData.json();
         if (recieveUserData.status === 422 || !recieveUserData) {
