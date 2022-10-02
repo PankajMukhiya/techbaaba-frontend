@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 
 const Contact = () => {
-  const [userData, setUserData] = useState({})
+  const [userData, setUserData] = useState({});
 
   // callUserContact
   const callUserContact = async () => {
     try {
-      const response = await fetch("/useralldata", {
+      const response = await fetch("https://techbaaba-api.onrender.com/useralldata", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-        }
+        },
       });
       const responseData = await response.json();
       console.log(responseData);
-      setUserData(responseData)
+      setUserData(responseData);
 
       if (!response.status === 200) {
         let err = new Error(response.error);
@@ -23,12 +23,13 @@ const Contact = () => {
     } catch (error) {
       console.log(`ERROR(in callUserContact): ${error} `);
     }
-  }
+  };
 
   useEffect(() => {
-    callUserContact()
-  }, [])
-  const {name, email, phone, work} = userData
+    callUserContact();
+  }, []);
+  console.log(userData);
+  // const {name, email, phone, work} = userData
   return (
     <>
       <section className="contact_section">
@@ -109,7 +110,7 @@ const Contact = () => {
             <div className="col-10  mx-auto mb-3">
               <div className="form-floating">
                 <textarea
-                style={{height: "100px"}}
+                  style={{ height: "100px" }}
                   className="form-control"
                   placeholder="Enter Your Concern"
                   id="floatingTextarea"
@@ -119,13 +120,9 @@ const Contact = () => {
             </div>
             {/* button */}
             <span className="text-center">
-            <button
-              className=" signInBtn btn btn-light mb-2"
-              type="button"
-            >
-              Send Messsage
-            </button>
-
+              <button className=" signInBtn btn btn-light mb-2" type="button">
+                Send Messsage
+              </button>
             </span>
           </div>
         </div>

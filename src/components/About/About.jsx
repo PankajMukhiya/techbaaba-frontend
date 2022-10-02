@@ -6,7 +6,7 @@ const About = () => {
   const [aboutInfo, setAboutInfo] = useState({});
   const callAboutPage = async () => {
     try {
-      const response = await fetch("/about", {
+      const response = await fetch("https://techbaaba-api.onrender.com/about", {
         method: "GET",
         headers: {
           Accept: "application/json",
